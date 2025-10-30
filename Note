@@ -1,0 +1,18 @@
+//MVC (Model-View-Controller) Pattern
+MVC (Model-View-Controller) is a software architectural pattern commonly used for developing user interfaces that
+divides an application into three interconnected components: Model, View, and Controller.
+This separation helps manage complexity, promotes organized code, and enhances maintainability.
+
+//Model
+Model represents the data and the business logic of the application. It is responsible for managing the data,
+handling data validation, and implementing the core functionality of the application. The Model notifies the View
+when there are changes in the data so that the View can update accordingly.
+
+//View
+View is responsible for the presentation layer of the application. It displays the data from the Model to the user and
+captures user input. The View listens for changes in the Model and updates the user interface when the Model's data changes.
+
+//Controller
+Controller acts as an intermediary between the Model and the View. It processes user input received from the View,
+updates the Model based on that input, and then updates the View to reflect any changes in the Model.
+The Controller contains the application logic that determines how the application responds to user actions.

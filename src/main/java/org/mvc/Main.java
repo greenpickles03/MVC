@@ -1,0 +1,27 @@
+package org.mvc;
+
+import org.mvc.controller.StudentController;
+import org.mvc.model.Student;
+import org.mvc.view.StudentView;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+
+        Student model  = retrieveStudentFromDatabase();
+        StudentView view = new StudentView();
+        StudentController controller = new StudentController(model, view);
+        controller.updateView();
+        controller.setStudentName("John");
+        controller.updateView();
+
+    }
+
+    private static Student retrieveStudentFromDatabase() {
+        Student student = new Student();
+        student.setName("Robert");
+        student.setRollNo("10");
+        return student;
+    }
+}
